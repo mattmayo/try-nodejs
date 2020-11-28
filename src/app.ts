@@ -1,4 +1,4 @@
-export const writeMessageFromMatt = (message: string) => {
+export const writeMessageFromMatt = (message: string): string => {
   return message + " from Matt";
 };
 
