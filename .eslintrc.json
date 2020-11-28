@@ -5,7 +5,9 @@
     },
     "extends": [
         "standard",
+        "plugin:jest/recommended",
         "plugin:json/recommended",
+        "plugin:jest/style",
         "plugin:markdown/recommended"
     ],
     "parser": "@typescript-eslint/parser",
@@ -14,7 +16,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "jest"
     ],
     "rules": {
     }
