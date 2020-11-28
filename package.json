@@ -7,6 +7,8 @@
     "app": "node dist/main.js",
     "build": "webpack",
     "dev": "webpack --watch",
+    "eslint": "eslint './**'",
+    "eslint:fix": "eslint './**' --fix",
     "test": "jest"
   },
   "repository": {
@@ -21,7 +23,16 @@
   "homepage": "https://github.com/mattmayo/try-nodejs#readme",
   "dependencies": {},
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "eslint": "^7.14.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-markdown": "^2.0.0-rc.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
     "terser-webpack-plugin": "^5.0.3",
     "ts-loader": "^8.0.11",
     "typescript": "^4.1.2",

@@ -1,5 +1,5 @@
 const writeMessage = (message: string) => {
-    console.log(message);
+  console.log(message)
 }
 
-writeMessage('Hello World! -Matt');
+writeMessage('Hello World! -Matt')
