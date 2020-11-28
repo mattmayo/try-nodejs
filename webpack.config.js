@@ -1,5 +1,5 @@
-const path = require('path')
-const webpack = require('webpack')
+const path = require("path");
+const webpack = require("webpack");
 
 /*
  * SplitChunksPlugin is enabled by default and replaced
@@ -22,24 +22,26 @@ const webpack = require('webpack')
  *
  */
 
-const TerserPlugin = require('terser-webpack-plugin')
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
-  entry: './src/app.ts',
+  mode: "development",
+  entry: "./src/app.ts",
   plugins: [new webpack.ProgressPlugin()],
 
   module: {
-    rules: [{
-      test: /\.(ts|tsx)$/,
-      loader: 'ts-loader',
-      include: [path.resolve(__dirname, 'src')],
-      exclude: [/node_modules/]
-    }]
+    rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        loader: "ts-loader",
+        include: [path.resolve(__dirname, "src")],
+        exclude: [/node_modules/],
+      },
+    ],
   },
 
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: [".tsx", ".ts", ".js"],
   },
 
   optimization: {
@@ -49,14 +51,14 @@ module.exports = {
       cacheGroups: {
         vendors: {
           priority: -10,
-          test: /[\\/]node_modules[\\/]/
-        }
+          test: /[\\/]node_modules[\\/]/,
+        },
       },
 
-      chunks: 'async',
+      chunks: "async",
       minChunks: 1,
       minSize: 30000,
-      name: false
-    }
-  }
-}
+      name: false,
+    },
+  },
+};

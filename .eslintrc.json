@@ -8,7 +8,8 @@
         "plugin:jest/recommended",
         "plugin:json/recommended",
         "plugin:jest/style",
-        "plugin:markdown/recommended"
+        "plugin:markdown/recommended",
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -17,8 +18,10 @@
     },
     "plugins": [
         "@typescript-eslint",
-        "jest"
+        "jest",
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier": "error"
     }
 }
