@@ -1,5 +1,5 @@
-const writeMessage = (message: string) => {
-  console.log(message)
+export const writeMessageFromMatt = (message: string) => {
+  return message + ' from Matt'
 }
 
-writeMessage('Hello World! -Matt')
+console.log(writeMessageFromMatt('Hello World! -Matt'))
